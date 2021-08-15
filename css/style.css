@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend+Deca&display=swap");
+
+:root {
+  --main-bg: hsl(233, 47%, 7%);
+  --card-bg: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --white: hsl(0, 0%, 100%);
+  --white-p: hsla(0, 0%, 100%, 0.75);
+  --white-h: sla(0, 0%, 100%, 0.6);
+
+  --inter: "Inter", sans-serif;
+  --lexend-deca: "Lexend Deca", sans-serif;
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--white);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--card-bg);
+  width: 100%;
+  align-self: center;
+  border-radius: 10px;
+  display: flex;
+  padding: 0;
+  flex-direction: column-reverse;
+}
+
+.text-box {
+  text-align: center;
+  padding: 30px;
+}
+
+.text-box h1 {
+  font-family: var(--inter);
+  font-weight: 700;
+  color: var(--white-h);
+}
+
+.text-box p {
+  font-family: var(--lexend-deca);
+  font-weight: 400;
+  color: var(--white-p);
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.text-box span {
+  color: var(--soft-violet);
+}
+
+.stat {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.stat h1 {
+  font-family: var(--inter);
+  font-weight: 700;
+  color: var(--white-h);
+}
+
+.stat p {
+  font-family: var(--lexend-deca);
+  color: var(--white-p);
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+.img-box img {
+  height: 100%;
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  mix-blend-mode: luminosity;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    width: 80%;
+  }
+
+  .card {
+    flex-direction: row;
+  }
+
+  .text-box {
+    text-align: start;
+    padding: 60px;
+    padding-right: 150px;
+  }
+
+  .text-box p {
+    margin-top: 30px;
+  }
+
+  .img-box img {
+    width: 540px;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .stat {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .stat p {
+    margin-top: 5px;
+  }
+}
